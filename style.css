@@ -1,0 +1,601 @@
+/* ==========================================
+   variáveis de cores (modo claro)
+   ========================================== */
+:root {
+  --fundo-pagina: #f4f6f5;      /* Fundo geral claro */
+  --superficie: #ffffff;        /* branco dos cards e caixas */
+  --cor-primaria: #0d5c46;      /* verde floresta principal */
+  --cor-primaria-hover: #083d2f;/* verde mais escuro para quando o rato pousa por cima */
+  --cor-destaque: #e07a5f;      /* alaranjado para destaque */
+  --texto-principal: #2b3e37;   /* Cor escura para o texto principal */
+  --texto-secundario: #60756d;  /* Cinza esverdeado para textos menores */
+  --borda-cor: #d3ded9;         /* Cor clara para as linhas das bordas */
+  --sombra-caixa: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --raio-suave: 8px;
+}
+
+/* ==========================================
+   MODO ESCURO COM :has()
+   ========================================== */
+:root:has(#modo-escuro:checked) {
+  --fundo-pagina: #111a14;      /* Fundo cinzento escuro esverdeado */
+  --superficie: #1b261e;        /* cards em cinzento escuro */
+  --cor-primaria: #388e3c;      /* verde floresta  */
+  --cor-primaria-hover: #2e7d32;
+  --cor-destaque: #81c784;      /* verde mais claro para destacar */
+  --texto-principal: #e8f5e9;   /* Texto branco para constraste */
+  --texto-secundario: #c8e6c9;  /* Texto secundário em verde claro acinzentado */
+  --borda-cor: #2e3d32;         /* Bordas em tom escuro */
+  --sombra-caixa: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/*  animação com transição 
+*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* secões + animação */
+main > section {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* sem margens + fonte geral do site */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--fundo-pagina);
+  color: var(--texto-principal);
+  font-family: 'Playpen Sans', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* cabeçalho e o posicionamento do logotipo à esquerda */
+.barra-topo {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+
+.conteudo-topo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cabecalho-principal {
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borda-cor);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.navegacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* imagem do logo e o texto à esquerda com flexbox */
+.logo-marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--texto-principal);
+  transition: transform 0.2s ease;
+}
+
+.logo-marca:hover {
+  transform: scale(1.02);
+}
+
+/* tamanho da imagem do logotipo */
+.logo-imagem {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-texto strong {
+  font-size: 1.2rem;
+  color: var(--cor-primaria);
+  letter-spacing: -0.5px;
+}
+
+.logo-texto small {
+  font-size: 0.7rem;
+  color: var(--texto-secundario);
+}
+
+/* menu navegação */
+.menu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 18px; /* Espaço confortável para clicar com o dedo */
+  width: 100%;
+}
+
+.menu-nav a {
+  color: var(--texto-principal);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.menu-nav a:hover {
+  color: var(--cor-primaria);
+}
+
+.btn-menu {
+  background-color: var(--cor-primaria);
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: var(--raio-suave);
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.btn-menu:hover {
+  transform: translateY(-2px);
+}
+
+/* botão com checkbox para o modo escuro */
+.botao-tema {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+  padding: 6px 14px;
+  border-radius: var(--raio-suave);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.botao-tema input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: var(--cor-primaria);
+  width: 16px;
+  height: 16px;
+}
+
+.botao-tema:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+/* banner principal com a foto de fundo e texto por cima */
+.banner-destaque {
+  background: linear-gradient(rgba(13, 92, 70, 0.85), rgba(8, 61, 47, 0.9)), url('/images/rescue-dogs-shelter.jpg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.conteudo-banner {
+  max-width: 800px;
+}
+
+.badge-fada {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.banner-destaque h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.banner-destaque p {
+  font-size: 1.15rem;
+  color: #e2e8f0;
+  margin-bottom: 35px;
+}
+
+.acoes-banner {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.botao-acao {
+  padding: 14px 28px;
+  border-radius: var(--raio-suave);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.botao-acao.primario {
+  background-color: var(--cor-destaque);
+  color: #ffffff;
+}
+
+.botao-acao.secundario {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.botao-acao:hover { 
+  transform: translateY(-4px); 
+}
+
+/* barra logo abaixo do banner*/
+.barra-resumo {
+  background-color: var(--superficie);
+  padding: 40px 0;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+/* contentor que centra e organiza as caixas */
+.caixas-lado {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px; /* Controla a distância entre os blocos */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* caixinha individual com fundo e cantos  */
+.bloco-atividades {
+  background-color: var(--fundo-pagina);
+  border: 1px solid var(--borda-cor);
+  border-radius: var(--raio-suave);
+  padding: 25px;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.bloco-atividades strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+  margin-bottom: 8px;
+}
+
+.bloco-atividades p {
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+  margin: 0;
+}
+
+/* CARDS DE ADOÇÃO (borda superior de destaque) */
+
+/* cartões lado a lado */
+.grelha-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 10px;
+}
+
+/* cada cartão */
+.cartao {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda-cor);
+  border-radius: var(--raio-suave);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-4px);
+}
+
+/* imagem animal ajustada */
+.imagem-animal {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* conteúdo de texto dentro do cartão */
+.corpo-cartao {
+  padding: 20px;
+  text-align: left;
+}
+
+.etiqueta {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.corpo-cartao h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--texto-principal);
+}
+
+.corpo-cartao p {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  margin-bottom: 15px;
+}
+
+.link-seta {
+  font-weight: 600;
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.link-seta:hover {
+  text-decoration: underline;
+}
+
+/* destaque para adoção */
+
+.carousel-item .grelha-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 10px;
+}
+
+/* card com linha grossa no topo */
+
+.imagem-animal {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  object-position: center top; 
+}
+
+.card-grande {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda-cor);
+  border-top: 5px solid var(--cor-primaria); 
+  border-radius: var(--raio-suave);
+  overflow: hidden;
+  box-shadow: var(--sombra-caixa);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-grande:hover { 
+  transform: translateY(-6px); 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.foto-placeholder {
+  background-color: var(--borda-cor);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-secundario);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.card-grande:hover .foto-placeholder {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.info-card { padding: 30px; }
+
+.tag-pequena {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--cor-destaque);
+  letter-spacing: 0.5px;
+}
+
+.info-card h3 { font-size: 1.6rem; margin: 10px 0; }
+.info-card p { color: var(--texto-secundario); font-size: 0.95rem; margin-bottom: 20px; }
+
+.link-seta {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.link-seta:hover {
+  transform: translateX(4px);
+}
+
+/* destaque para adoção */
+
+.cabecalho-adocao {
+   max-width: 900px;
+   text-align: center;
+}
+.cabecalho-adocao h2 { 
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.cabecalho-adocao p { 
+  color: var(--texto-secundario);
+  margin-bottom: 20px; 
+}
+
+
+/* como ajudar (três mini blocos) */
+.fundo-destaque-bloco {
+  background-color: var(--superficie);
+  border-top: 1px solid var(--borda-cor);
+  border-bottom: 1px solid var(--borda-cor);
+  padding: 70px 0;
+  text-align: center;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.bloco-pergunta { max-width: 900px;}
+.bloco-pergunta h2 { font-size: 2.2rem; margin-bottom: 10px; }
+.bloco-pergunta > p { color: var(--texto-secundario); margin-bottom: 40px; }
+
+.bloco-3-colunas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  igtext-aln: left;
+}
+
+.mini-bloco {
+  background-color: var(--fundo-pagina);
+  border: 1px solid var(--borda-cor);
+  border-top: 4px solid var(--cor-primaria); 
+  border-radius: var(--raio-suave);
+  padding: 25px 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+}
+
+.mini-bloco:hover {
+  transform: translateY(-4px);
+}
+
+.mini-bloco h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--cor-primaria); }
+.mini-bloco p { font-size: 0.9rem; color: var(--texto-secundario); }
+
+/* contactos e rodapé */
+.caixa-contacto-central {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda-cor);
+  border-top: 6px solid var(--cor-primaria);
+  border-radius: var(--raio-suave);
+  padding: 50px;
+  text-align: center;
+  box-shadow: var(--sombra-caixa);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.caixa-contacto-central h2 { margin-bottom: 15px; }
+.morada-destaque { font-size: 1.1rem; font-weight: 600; color: var(--cor-primaria); margin-bottom: 15px; }
+
+.detalhes-extras-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+}
+
+.rodape-institucional {
+  background-color: var(--superficie);
+  border-top: 1px solid var(--borda-cor);
+  padding: 30px 0;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.conteudo-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+}
+
+.conteudo-rodape a { color: var(--cor-primaria); text-decoration: none; font-weight: 700; }
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+
+@media (min-width: 768px) {
+
+  .cabecalho-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-nav {
+    width: auto;
+    gap: 25px;
+  }
+
+  .banner-destaque h1 {
+    font-size: 3.2rem;
+  }
+
+  /* para PC, permitir que a grelha mostre os cards com largura total */
+  .grelha-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+/* ajusta as setas do carrossel do Bootstrap para ficarem visíveis */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--cor-primaria);
+  border-radius: 50%;
+  padding: 20px;
+  background-size: 50%;
+}
+
+.carousel-control-prev {
+  left: -50px;
+}
+
+.carousel-control-next {
+  right: -50px;
+}
+
+.navegacao {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .banner-destaque h1 {
+    font-size: 3.2rem;
+  }

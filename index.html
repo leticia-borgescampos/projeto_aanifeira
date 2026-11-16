@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Redesign oficial do website da Aanifeira - Santa Maria da Feira">
+  <title>Aanifeira | Associação dos Amigos dos Animais da Feira</title>
+  <link rel="icon" type="image/png" href="/images/logo.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- localização -->
+  <div class="barra-topo">
+    <div class="container conteudo-topo">
+      <span>📍 Zona Industrial de Mosteirô, Santa Maria da Feira</span>
+      <span>📞 256 106 323 / 934 703 277</span>
+    </div>
+  </div>
+
+  <!-- cabeçalho principal com o logotipo à esquerda -->
+  <header class="cabecalho-principal">
+    <div class="container navegacao">
+      <!-- logotipo e o nome da associação -->
+      <a href="#inicio" class="logo-marca">
+        <img src="/images/logo.jpg" alt="Logótipo Aanifeira" class="logo-imagem">
+        <div class="logo-texto">
+          <strong>Aanifeira</strong>
+          <h5>Proteção Animal</h5>
+        </div>
+      </a>
+
+      <!-- navegação -->
+      <nav class="menu-nav">
+        <a href="#sobre">Quem Somos</a>
+        <a href="#adocao">Adoções</a>
+        <a href="#apoiar">Seja Voluntário</a>
+        <a href="#contacto" class="btn-menu">Contactos</a>
+      </nav>
+
+      <!--botão em checkbox para ligar/desligar o modo escuro -->
+      <label class="botao-tema">
+        <input type="checkbox" id="modo-escuro">
+        <span>Modo escuro</span>
+      </label>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+
+    <!-- banner verde com foto de fundo -->
+    <section class="banner-destaque">
+      <div class="container conteudo-banner">
+        <span class="badge-fada">Associação de Proteção Animal</span>
+        <h1>Um gesto muda tudo<br>Tudo o que precisam é de amor</h1>
+        <p>Conheça os animais disponíveis para adoção</p>
+        <div class="acoes-banner">
+          <a href="#adocao" class="botao-acao primario">Ver Animais para Adoção</a>
+          <a href="#apoiar" class="botao-acao secundario">Quero Contribuir</a>
+        </div>
+      </div>
+    </section>
+
+    <!--barra do banner com atividades -->
+<section class="barra-resumo">
+  <div class="conteudo-central caixas-lado">
+    
+    <div class="bloco-atividades">
+      <strong>Acolhimento</strong>
+      <p>Proteção e Abrigo Diário</p>
+    </div>
+
+    <div class="bloco-atividades">
+      <strong>Adoção Responsável</strong>
+      <p>Encontre o seu novo melhor amigo</p>
+    </div>
+
+    <div class="bloco-atividades">
+      <strong>Apoio à Comunidade</strong>
+      <p>Sensibilização e Bem-estar</p>
+    </div>
+
+  </div>
+</section>
+
+   <!-- animais em destaque para adoção -->
+<section id="adocao" class="container bloco-adocao">
+  <div class="container cabecalho-adocao">
+    <h2>Em destaque para adoção</h2>
+    <p>Estes patudos estão prontos para iniciar uma nova vida em família.</p>
+  </div>
+
+  <!-- carrossel do Bootstrap com autoplay -->
+  <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+
+      <!-- SLIDE 1 (Bobi e Mimi) -->
+      <div class="carousel-item active">
+        <div class="grelha-cards">
+          
+          <article class="cartao">
+            <img src="/images/dog1.jpg" alt="Bobi" class="imagem-animal">
+            <div class="corpo-cartao">
+              <span class="etiqueta">Cão · Macho · Senior</span>
+              <h3>Bobi</h3>
+              <p>Muito sociável, adora brincar no espaço exterior e dá-se bem com outros animais.</p>
+              <a href="#contacto" class="link-seta">Saber mais sobre o Bobi →</a>
+            </div>
+          </article>
+
+          <article class="cartao">
+            <img src="/images/cat2.jpg" alt="Mimi" class="imagem-animal">
+            <div class="corpo-cartao">
+              <span class="etiqueta">Gato · Fêmea · Adulta</span>
+              <h3>Mimi</h3>
+              <p>Tranquila e extremamente afetuosa. Perfeita para companhia em apartamento.</p>
+              <a href="#contacto" class="link-seta">Saber mais sobre a Mimi →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- SLIDE 2 (Luna e Simba) -->
+      <div class="carousel-item">
+        <div class="grelha-cards">
+          
+          <article class="cartao">
+            <img src="/images/dog3.jpg" alt="Luna" class="imagem-animal">
+            <div class="corpo-cartao">
+              <span class="etiqueta">Cão · Fêmea · Sénior</span>
+              <h3>Luna</h3>
+              <p>Calma e muito obediente. Procura uma família tranquila para partilhar momentos de descanso.</p>
+              <a href="#contacto" class="link-seta">Saber mais sobre a Luna →</a>
+            </div>
+          </article>
+
+          <article class="cartao">
+            <img src="/images/cat6.jpg" alt="Simba" class="imagem-animal">
+            <div class="corpo-cartao">
+              <span class="etiqueta">Gato · Macho · Jovem</span>
+              <h3>Simba</h3>
+              <p>Curioso e brincalhão. Adora caçar brinquedos de corda e dormir ao sol na janela.</p>
+              <a href="#contacto" class="link-seta">Saber mais sobre o Simba →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- SLIDE 3 (Max e Mia) -->
+      <div class="carousel-item">
+        <div class="grelha-cards">
+          
+          <article class="cartao">
+            <img src="/images/cute-dog-up-adoption.jpg" alt="Max" class="imagem-animal">
+            <div class="corpo-cartao">
+              <span class="etiqueta">Cão · Macho · Adulto</span>
+              <h3>Max</h3>
+              <p>Cheio de energia, adora longas caminhadas e jogos de apanhar a bola no parque.</p>
+              <a href="#contacto" class="link-seta">Saber mais sobre o Max →</a>
+            </div>
+          </article>
+
+          <article class="cartao">
+            <img src="/images/cat4..jpg" alt="Mia" class="imagem-animal">
+            <div class="corpo-cartao">
+              <span class="etiqueta">Gato · Fêmea · Jovem</span>
+              <h3>Mia</h3>
+              <p>Muito dócil e meiga. Adapta-se facilmente a ambientes acolhedores e adora festas.</p>
+              <a href="#contacto" class="link-seta">Saber mais sobre a Mia →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botões de controlo do carrossel -->
+   
+    <!-- Botões do carrossel -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Seguinte</span>
+    </button>
+  </div>
+</section>
+
+    <!-- como ajudar  -->
+    <section id="apoiar" class="fundo-destaque-bloco">
+      <div class="container bloco-pergunta">
+        <h2>Como pode ajudar o nosso abrigo?</h2>
+        <p>Cada gesto conta. Descubra como pode ajudar a cuidar, proteger e dar um futuro melhor aos animais.</p>
+        <div class="bloco-3-colunas">
+          <div class="mini-bloco">
+            <h3> Voluntariado</h3>
+            <p>Junta-te à nossa equipa! Precisamos de mãos e corações para cuidar, passear, limpar, acolher e dar carinho. Cada hora de ajuda faz a diferença.</p>
+          </div>
+          <div class="mini-bloco">
+            <h3> Donativos</h3>
+            <p>Podes contribuir com donativos em dinheiro ou bens (ração, mantas, produtos de higiene, medicamentos). Toda a ajuda é essencial para continuarmos a cuidar com dignidade.</p>
+          </div>
+          <div class="mini-bloco">
+            <h3> Apadrinhar</h3>
+            <p>Se não podes adotar, podes apadrinhar um dos nossos animais. O teu contributo ajuda-nos a garantir cuidados veterinários, alimentação e conforto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contactos e morada -->
+    <section id="contacto" class="container bloco-quem-somos">
+      <div class="caixa-contacto-central">
+        <h2>Visite as nossas instalações</h2>
+        <p class="morada-destaque">Travessa das Bocas – Zona Industrial de Mosteirô, 4520-409 Mosteirô</p>
+        <div class="detalhes-extras-contacto">
+          <span>📞 256 106 323 / 934 703 277</span>
+          <span>✉️ aanifeira@aanifeira.pt</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- rodapé -->
+  <footer class="rodape-institucional">
+    <div class="container conteudo-rodape">
+      <p>&copy; 2026 Aanifeira — Projeto de Redesign UI/UX por Letícia Campos (Edição Web)</p>
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</body>
+</html>
