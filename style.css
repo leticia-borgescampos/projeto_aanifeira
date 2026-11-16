@@ -1,36 +1,31 @@
-/* ==========================================
-   variáveis de cores (modo claro)
-   ========================================== */
+/*  VARIÁVEIS DE CORES (modo claro) */
 :root {
-  --fundo-pagina: #f4f6f5;      /* Fundo geral claro */
-  --superficie: #ffffff;        /* branco dos cards e caixas */
-  --cor-primaria: #0d5c46;      /* verde floresta principal */
-  --cor-primaria-hover: #083d2f;/* verde mais escuro para quando o rato pousa por cima */
-  --cor-destaque: #e07a5f;      /* alaranjado para destaque */
-  --texto-principal: #2b3e37;   /* Cor escura para o texto principal */
-  --texto-secundario: #60756d;  /* Cinza esverdeado para textos menores */
-  --borda-cor: #d3ded9;         /* Cor clara para as linhas das bordas */
+  --fundo-pagina: #f4f6f5;       /* Fundo geral claro */
+  --superficie: #ffffff;         /* branco dos cards e caixas */
+  --cor-primaria: #0d5c46;       /* verde floresta principal */
+  --cor-primaria-hover: #083d2f; /* verde mais escuro para hover */
+  --cor-destaque: #e07a5f;       /* alaranjado para destaque */
+  --texto-principal: #2b3e37;    /* Cor escura para o texto principal */
+  --texto-secundario: #60756d;   /* Cinza esverdeado para textos menores */
+  --borda-cor: #d3ded9;          /* Cor clara para as linhas das bordas */
   --sombra-caixa: 0 10px 30px rgba(0, 0, 0, 0.04);
   --raio-suave: 8px;
 }
 
-/* ==========================================
-   MODO ESCURO COM :has()
-   ========================================== */
+/* MODO ESCURO COM :has() */
 :root:has(#modo-escuro:checked) {
-  --fundo-pagina: #111a14;      /* Fundo cinzento escuro esverdeado */
-  --superficie: #1b261e;        /* cards em cinzento escuro */
-  --cor-primaria: #388e3c;      /* verde floresta  */
+  --fundo-pagina: #111a14;
+  --superficie: #1b261e;
+  --cor-primaria: #388e3c;
   --cor-primaria-hover: #2e7d32;
-  --cor-destaque: #81c784;      /* verde mais claro para destacar */
-  --texto-principal: #e8f5e9;   /* Texto branco para constraste */
-  --texto-secundario: #c8e6c9;  /* Texto secundário em verde claro acinzentado */
-  --borda-cor: #2e3d32;         /* Bordas em tom escuro */
+  --cor-destaque: #81c784;
+  --texto-principal: #e8f5e9;
+  --texto-secundario: #c8e6c9;
+  --borda-cor: #2e3d32;
   --sombra-caixa: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/*  animação com transição 
-*/
+/*  ANIMAÇÃO COM TRANSIÇÃO */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -42,13 +37,16 @@
   }
 }
 
-/* secões + animação */
 main > section {
   animation: fadeIn 0.6s ease-out forwards;
 }
 
 /* sem margens + fonte geral do site */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: var(--fundo-pagina);
@@ -58,14 +56,13 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* cabeçalho e o posicionamento do logotipo à esquerda */
+/* CABEÇALHO E NAVEGAÇÃO (Mobile-First)*/
 .barra-topo {
   background-color: var(--cor-primaria);
   color: #ffffff;
@@ -98,7 +95,6 @@ body {
   width: 100%;
 }
 
-/* imagem do logo e o texto à esquerda com flexbox */
 .logo-marca {
   display: flex;
   align-items: center;
@@ -112,7 +108,6 @@ body {
   transform: scale(1.02);
 }
 
-/* tamanho da imagem do logotipo */
 .logo-imagem {
   height: 45px;
   width: auto;
@@ -132,17 +127,16 @@ body {
 }
 
 .logo-texto small {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--texto-secundario);
 }
 
-/* menu navegação */
 .menu-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 12px 18px; /* Espaço confortável para clicar com o dedo */
+  gap: 12px 18px;
   width: 100%;
 }
 
@@ -171,7 +165,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* botão com checkbox para o modo escuro */
 .botao-tema {
   display: flex;
   align-items: center;
@@ -199,11 +192,11 @@ body {
   color: #ffffff;
 }
 
-/* banner principal com a foto de fundo e texto por cima */
+/* BANNER PRINCIPAL */
 .banner-destaque {
-  background: linear-gradient(rgba(13, 92, 70, 0.85), rgba(8, 61, 47, 0.9)), url('/images/rescue-dogs-shelter.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(13, 92, 70, 0.85), rgba(8, 61, 47, 0.9)), url('images/rescue-dogs-shelter.jpg') center/cover no-repeat;
   color: #ffffff;
-  padding: 100px 0;
+  padding: 90px 0;
   text-align: center;
 }
 
@@ -225,14 +218,14 @@ body {
 }
 
 .banner-destaque h1 {
-  font-size: 3rem;
-  line-height: 1.15;
+  font-size: 2.4rem;
+  line-height: 1.2;
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
 
 .banner-destaque p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #e2e8f0;
   margin-bottom: 35px;
 }
@@ -267,25 +260,23 @@ body {
   transform: translateY(-4px); 
 }
 
-/* barra logo abaixo do banner*/
+/* BARRA DE RESUMO */
 .barra-resumo {
   background-color: var(--superficie);
   padding: 40px 0;
   transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
-/* contentor que centra e organiza as caixas */
 .caixas-lado {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px; /* Controla a distância entre os blocos */
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
 }
 
-/* caixinha individual com fundo e cantos  */
 .bloco-atividades {
   background-color: var(--fundo-pagina);
   border: 1px solid var(--borda-cor);
@@ -307,17 +298,93 @@ body {
   margin: 0;
 }
 
-/* CARDS DE ADOÇÃO (borda superior de destaque) */
+/* QUEM SOMOS (.bloco-sobre)*/
+.bloco-sobre {
+  padding: 70px 20px;
+}
 
-/* cartões lado a lado */
-.grelha-cards {
+.grelha-sobre {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.imagem-sobre img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--raio-suave);
+  box-shadow: var(--sombra-caixa);
+}
+
+.etiqueta-sobre {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--cor-destaque);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.texto-sobre h2 {
+  font-size: 2rem;
+  color: var(--texto-principal);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.texto-sobre p {
+  color: var(--texto-secundario);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* CARROSSEL DE ADOÇÃO */
+.bloco-adocao {
+  padding: 60px 20px 70px 20px;
+  
+  /* borda verde de destaque no topo (mesmo estilo dos mini-blocos) */
+  border-top: 4px solid var(--cor-primaria);
+  
+  /* fundo destacado e cantos arredondados */
+  background-color: var(--superficie);
+  border-radius: var(--raio-suave);
+  box-shadow: var(--sombra-caixa);
+  
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.cabecalho-adocao {
+  max-width: 900px;
+  margin: 0 auto 35px auto;
+  text-align: center;
+}
+
+.cabecalho-adocao h2 { 
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--texto-principal);
+}
+
+.cabecalho-adocao p { 
+  color: var(--texto-secundario);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.carousel-item .grelha-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   padding: 20px 10px;
 }
 
-/* cada cartão */
 .cartao {
   background-color: var(--superficie);
   border: 1px solid var(--borda-cor);
@@ -330,15 +397,14 @@ body {
   transform: translateY(-4px);
 }
 
-/* imagem animal ajustada */
 .imagem-animal {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
-/* conteúdo de texto dentro do cartão */
 .corpo-cartao {
   padding: 20px;
   text-align: left;
@@ -368,107 +434,16 @@ body {
   font-weight: 600;
   color: var(--cor-primaria);
   text-decoration: none;
-}
-
-.link-seta:hover {
-  text-decoration: underline;
-}
-
-/* destaque para adoção */
-
-.carousel-item .grelha-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 20px 10px;
-}
-
-/* card com linha grossa no topo */
-
-.imagem-animal {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  object-position: center top; 
-}
-
-.card-grande {
-  background-color: var(--superficie);
-  border: 1px solid var(--borda-cor);
-  border-top: 5px solid var(--cor-primaria); 
-  border-radius: var(--raio-suave);
-  overflow: hidden;
-  box-shadow: var(--sombra-caixa);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-grande:hover { 
-  transform: translateY(-6px); 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-.foto-placeholder {
-  background-color: var(--borda-cor);
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--texto-secundario);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-.card-grande:hover .foto-placeholder {
-  background-color: var(--cor-primaria);
-  color: #ffffff;
-}
-
-.info-card { padding: 30px; }
-
-.tag-pequena {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--cor-destaque);
-  letter-spacing: 0.5px;
-}
-
-.info-card h3 { font-size: 1.6rem; margin: 10px 0; }
-.info-card p { color: var(--texto-secundario); font-size: 0.95rem; margin-bottom: 20px; }
-
-.link-seta {
-  color: var(--cor-primaria);
-  text-decoration: none;
-  font-weight: 700;
   display: inline-block;
   transition: transform 0.2s ease;
 }
 
 .link-seta:hover {
+  text-decoration: underline;
   transform: translateX(4px);
 }
 
-/* destaque para adoção */
-
-.cabecalho-adocao {
-   max-width: 900px;
-   text-align: center;
-}
-.cabecalho-adocao h2 { 
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-.cabecalho-adocao p { 
-  color: var(--texto-secundario);
-  margin-bottom: 20px; 
-}
-
-
-/* como ajudar (três mini blocos) */
+/*COMO AJUDAR (3 blocos) */
 .fundo-destaque-bloco {
   background-color: var(--superficie);
   border-top: 1px solid var(--borda-cor);
@@ -478,7 +453,12 @@ body {
   transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
-.bloco-pergunta { max-width: 900px;}
+.bloco-pergunta { 
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .bloco-pergunta h2 { font-size: 2.2rem; margin-bottom: 10px; }
 .bloco-pergunta > p { color: var(--texto-secundario); margin-bottom: 40px; }
 
@@ -486,7 +466,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  igtext-aln: left;
+  text-align: left;
 }
 
 .mini-bloco {
@@ -502,16 +482,30 @@ body {
   transform: translateY(-4px);
 }
 
-.mini-bloco h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--cor-primaria); }
-.mini-bloco p { font-size: 0.9rem; color: var(--texto-secundario); }
+.mini-bloco h3 { 
+  font-size: 1.2rem; 
+  margin-top: 0;
+  margin-bottom: 10px; 
+  color: var(--cor-primaria); 
+}
 
-/* contactos e rodapé */
+.mini-bloco p { 
+  font-size: 0.9rem; 
+  color: var(--texto-secundario);
+  margin: 0; 
+}
+
+/* CONTACTOS E RODAPÉ*/
+.bloco-quem-somos {
+  padding: 70px 20px;
+}
+
 .caixa-contacto-central {
   background-color: var(--superficie);
   border: 1px solid var(--borda-cor);
   border-top: 6px solid var(--cor-primaria);
   border-radius: var(--raio-suave);
-  padding: 50px;
+  padding: 45px 20px;
   text-align: center;
   box-shadow: var(--sombra-caixa);
   transition: background-color 0.4s ease, border-color 0.4s ease;
@@ -548,14 +542,12 @@ body {
 
 .conteudo-rodape a { color: var(--cor-primaria); text-decoration: none; font-weight: 700; }
 
-/* MEDIA QUERIES PARA RESPONSIVIDADE */
-
+/*  MEDIA QUERIES PARA COMPUTADOR */
 @media (min-width: 768px) {
 
-  .cabecalho-principal {
-    display: flex;
+  .navegacao {
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 
   .menu-nav {
@@ -567,35 +559,32 @@ body {
     font-size: 3.2rem;
   }
 
-  /* para PC, permitir que a grelha mostre os cards com largura total */
+  /* bloco "quem somos" em 2 colunas no computador */
+  .grelha-sobre {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Grelha de cartões do carrossel no PC */
   .grelha-cards {
     grid-template-columns: repeat(2, 1fr);
     max-width: 1000px;
     margin: 0 auto;
   }
 
-/* ajusta as setas do carrossel do Bootstrap para ficarem visíveis */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: var(--cor-primaria);
-  border-radius: 50%;
-  padding: 20px;
-  background-size: 50%;
-}
-
-.carousel-control-prev {
-  left: -50px;
-}
-
-.carousel-control-next {
-  right: -50px;
-}
-
-.navegacao {
-    flex-direction: row;
-    justify-content: space-between;
+  /* setas do carrossel do Bootstrap visíveis fora dos cartões */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 50%;
   }
 
-  .banner-destaque h1 {
-    font-size: 3.2rem;
+  .carousel-control-prev {
+    left: -40px;
   }
+
+  .carousel-control-next {
+    right: -40px;
+  }
+}
