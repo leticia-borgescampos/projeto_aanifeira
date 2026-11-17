@@ -503,52 +503,88 @@ body {
 }
 
 /* CONTACTOS E RODAPÉ*/
-.bloco-quem-somos {
-  padding: 70px 20px;
-}
 
 .caixa-contacto-central {
   background-color: var(--superficie);
   border: 1px solid var(--borda-cor);
   border-top: 6px solid var(--cor-primaria);
   border-radius: var(--raio-suave);
-  padding: 45px 20px;
-  text-align: center;
+  padding: 40px 25px;
   box-shadow: var(--sombra-caixa);
+  display: grid;
+  grid-template-columns: 1fr; /* 1 coluna no telemóvel */
+  gap: 40px;
+  text-align: left;
   transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
-.caixa-contacto-central h2 { margin-bottom: 15px; }
-.morada-destaque { font-size: 1.1rem; font-weight: 600; color: var(--cor-primaria); margin-bottom: 15px; }
+.info-contacto-lado h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--texto-principal);
+}
 
-.detalhes-extras-contacto {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  color: var(--texto-secundario);
+.morada-destaque {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+}
+
+.detalhes-extras-contacto p {
   font-size: 0.95rem;
-}
-
-.rodape-institucional {
-  background-color: var(--superficie);
-  border-top: 1px solid var(--borda-cor);
-  padding: 30px 0;
-  transition: background-color 0.4s ease, border-color 0.4s ease;
-}
-
-.conteudo-rodape {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  font-size: 0.9rem;
   color: var(--texto-secundario);
+  margin-bottom: 8px;
 }
 
-.conteudo-rodape a { color: var(--cor-primaria); text-decoration: none; font-weight: 700; }
+/*formulário */
+.formulario-contacto h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--texto-principal);
+}
 
+.campo-grupo {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-grupo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--borda-cor);
+  border-radius: var(--raio-suave);
+  background-color: var(--fundo-pagina);
+  color: var(--texto-principal);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, background-color 0.4s ease;
+}
+
+/* Indicador visual de Foco para Acessibilidade (Requisito 6.6) */
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  outline: 2px solid var(--cor-primaria);
+  border-color: transparent;
+}
+
+.btn-enviar {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
 /*  MEDIA QUERIES PARA COMPUTADOR */
 @media (min-width: 768px) {
 

@@ -227,15 +227,47 @@
       </div>
     </section>
 
-    <!-- contactos e morada -->
+    <!-- contactos e formulário -->
     <section id="contacto" class="container bloco-quem-somos">
       <div class="caixa-contacto-central">
-        <h2>Visite as nossas instalações</h2>
-        <p class="morada-destaque">Travessa das Bocas – Zona Industrial de Mosteirô, 4520-409 Mosteirô</p>
-        <div class="detalhes-extras-contacto">
-          <span>📞 256 106 323 / 934 703 277</span>
-          <span>✉️ aanifeira@aanifeira.pt</span>
+        
+        <!-- Coluna da Esquerda: Morada e Informações -->
+        <div class="info-contacto-lado">
+          <h2>Visite as nossas instalações</h2>
+          <p class="morada-destaque">Travessa das Bocas – Zona Industrial de Mosteirô, 4520-409 Mosteirô</p>
+          <div class="detalhes-extras-contacto">
+            <p><span>📞</span> 256 106 323 / 934 703 277</p>
+            <p><span>✉️</span> aanifeira@aanifeira.pt</p>
+          </div>
         </div>
+
+        <!-- Coluna da Direita: Formulário Obrigatório (Secção 4.6 do Enunciado) -->
+        <form class="formulario-contacto" action="#" method="post">
+          <h3>Envie-nos uma mensagem</h3>
+          
+          <div class="campo-grupo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="O seu nome" required>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.pt" required>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Ex: Informações sobre Adoção / Voluntariado" required>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva aqui a sua mensagem..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-menu btn-enviar">Enviar Mensagem</button>
+        </form>
+
       </div>
     </section>
 
