@@ -21,9 +21,9 @@
     </div>
   </div>
 
-  <!-- cabeçalho principal com o logotipo à esquerda -->
+ <!-- cabeçalho principal com menu hambúrguer -->
   <header class="cabecalho-principal">
-    <div class="container navegacao">
+    <div class="container d-flex justify-content-between align-items-center">
 
       <!-- logotipo e o nome da associação -->
       <a href="#inicio" class="logo-marca">
@@ -34,19 +34,30 @@
         </div>
       </a>
 
-      <!-- navegação -->
-      <nav class="menu-nav">
-        <a href="#sobre">Quem Somos</a>
-        <a href="#adocao">Adoções</a>
-        <a href="#apoiar">Seja Voluntário</a>
-        <a href="#contacto" class="btn-menu">Contactos</a>
+      <!-- botão hambúrguer bootstrap -->
+      <button class="navbar-toggler d-lg-none" type="button btn-success" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navegação e modo escuro que ficam escondidos em mobile  -->
+      <nav class="collapse navbar-collapse d-lg-flex justify-content-end align-items-center w-auto" id="menuNavegacao">
+        <div class="menu-nav d-flex flex-column flex-lg-row align-items-center gap-3 m-0">
+          <a href="#sobre">Quem Somos</a>
+          <a href="#adocao">Adoções</a>
+          <a href="#apoiar">Seja Voluntário</a>
+          <a href="#contacto" class="btn-menu">Contactos</a>
+
+          <!-- botão em checkbox para ligar/desligar o modo escuro -->
+          <label class="botao-tema mb-0">
+            <input type="checkbox" id="modo-escuro">
+            <span>Modo escuro</span>
+          </label>
+        </div>
       </nav>
 
-      <!-- botão em checkbox para ligar/desligar o modo escuro -->
-      <label class="botao-tema">
-        <input type="checkbox" id="modo-escuro">
-        <span>Modo escuro</span>
-      </label>
+    </div>
+  </header>
+
     </div>
   </header>
 
@@ -296,7 +307,7 @@
       <div class="modal-body">
         
         <!-- imagem pop-up -->
-        <img src="images/sucesso.jpg" alt="Mensagem Enviada" class="img-fluid rounded-2 mb-3 pb-0" width="300" >
+        <img src="images/sucesso.jpg" alt="Mensagem Enviada" class="img-fluid rounded-2 mb-3 pb" width="300" >
         <p>Muito obrigado pelo seu contacto! <br>
           Vamos responder o mais brevemente possível</p>
       </div>
