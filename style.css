@@ -626,6 +626,11 @@ body {
   text-align: center;
 }
 
+.btn-success {
+  margin-top: 0;                  
+  padding: 8px 20px;
+}
+
 /*  MEDIA QUERIES PARA COMPUTADOR */
 @media (min-width: 768px) {
 
