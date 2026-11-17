@@ -632,6 +632,10 @@ body {
 
 /*  MEDIA QUERIES PARA COMPUTADOR */
 @media (min-width: 768px) {
+  .navegacao {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .navegacao {
     flex-direction: row;
