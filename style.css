@@ -586,7 +586,7 @@ body {
 .btn-topo {
   display: block;                  /* alinhamento */
   width: fit-content;              /* ajuste do tamanho do texto */
-  margin: 30px 0 20px auto;        /* "empurra" o botão para a direita */
+  margin: auto;        /* "empurra" o botão para a direita */
 
   /* cores */
   background-color: var(--cor-primaria);
@@ -609,7 +609,7 @@ body {
   transform: translateY(-3px);
 }
 
-.conteudo-rodape p {
+.conteudo-rodape {
   padding: 30px 0; 
   display: flex;                  
   justify-content: space-between; 
@@ -617,6 +617,13 @@ body {
   padding: 20px 0;                
   flex-wrap: wrap;                
   gap: 15px;                      
+}
+
+.conteudo-rodape p {
+  margin: 0;
+  color: var(--texto-secundario);
+  margin-left: auto;
+  text-align: center;
 }
 
 /*  MEDIA QUERIES PARA COMPUTADOR */
