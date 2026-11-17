@@ -117,104 +117,110 @@
     </section>
 
     <!-- animais em destaque para adoção -->
-    <section id="adocao" class="container bloco-adocao">
-      <div class="cabecalho-adocao">
-        <h2>Em destaque para adoção</h2>
-        <p>Estes patudos estão prontos para iniciar uma nova vida em família.</p>
+<div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+
+    <!-- SLIDE 1 -->
+    <div class="carousel-item active">
+      <div class="grelha-cards">
+        
+        <!-- Cartão do Bobi: Visível em TODOS os ecrãs (No telemóvel aparece sozinho, no PC aparece com a Mimi) -->
+        <article class="card">
+          <img src="images/dog1.jpg" alt="Bobi" class="imagem-animal" width="400" height="250"> 
+          <div class="corpo-card">
+            <span class="etiqueta">Cão · Macho · Senior</span>
+            <h3>Bobi</h3>
+            <p>Muito sociável, adora brincar no espaço exterior e dá-se bem com outros animais.</p>
+            <a href="#contacto" class="link-seta">Saber mais sobre o Bobi →</a>
+          </div>
+        </article>
+
+        <!-- Cartão da Mimi: ESCONDIDO no telemóvel (d-none), aparece apenas de tablet/PC para cima (d-md-block) -->
+        <article class="card d-none d-md-block">
+          <img src="images/cat2.jpg" alt="Mimi" class="imagem-animal" width="400" height="250">
+          <div class="corpo-card">
+            <span class="etiqueta">Gato · Fêmea · Adulta</span>
+            <h3>Mimi</h3>
+            <p>Tranquila e extremamente afetuosa. Perfeita para companhia em apartamento.</p>
+            <a href="#contacto" class="link-seta">Saber mais sobre a Mimi →</a>
+          </div>
+        </article>
+
       </div>
+    </div>
 
-      <!-- carrossel do Bootstrap com autoplay -->
-      <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner">
 
-          <!-- SLIDE 1 (Bobi e Mimi) -->
-          <div class="carousel-item active">
-            <div class="grelha-cards">
-              <article class="cartao">
-                <img src="images/dog1.jpg" alt="Bobi" class="imagem-animal" width="400" height="250"> 
-                <div class="corpo-cartao">
-                  <span class="etiqueta">Cão · Macho · Senior</span>
-                  <h3>Bobi</h3>
-                  <p>Muito sociável, adora brincar no espaço exterior e dá-se bem com outros animais.</p>
-                  <a href="#contacto" class="link-seta">Saber mais sobre o Bobi →</a>
-                </div>
-              </article>
-
-              <article class="cartao">
-                <img src="images/cat2.jpg" alt="Mimi" class="imagem-animal" width="400" height="250">
-                <div class="corpo-cartao">
-                  <span class="etiqueta">Gato · Fêmea · Adulta</span>
-                  <h3>Mimi</h3>
-                  <p>Tranquila e extremamente afetuosa. Perfeita para companhia em apartamento.</p>
-                  <a href="#contacto" class="link-seta">Saber mais sobre a Mimi →</a>
-                </div>
-              </article>
-            </div>
+    <!-- SLIDE 2 -->
+    <div class="carousel-item">
+      <div class="grelha-cards">
+        
+        <!-- Luna: Visível em todos os ecrãs -->
+        <article class="card">
+          <img src="images/dog3.jpg" alt="Luna" class="imagem-animal" width="400" height="250">
+          <div class="corpo-card">
+            <span class="etiqueta">Cão · Fêmea · Sénior</span>
+            <h3>Luna</h3>
+            <p>Calma e muito obediente. Procura uma família tranquila para partilhar momentos de descanso.</p>
+            <a href="#contacto" class="link-seta">Saber mais sobre a Luna →</a>
           </div>
+        </article>
 
-          <!-- SLIDE 2 (Luna e Simba) -->
-          <div class="carousel-item">
-            <div class="grelha-cards">
-              <article class="cartao">
-                <img src="images/dog3.jpg" alt="Luna" class="imagem-animal" width="100" height="25">
-                <div class="corpo-cartao">
-                  <span class="etiqueta">Cão · Fêmea · Sénior</span>
-                  <h3>Luna</h3>
-                  <p>Calma e muito obediente. Procura uma família tranquila para partilhar momentos de descanso.</p>
-                  <a href="#contacto" class="link-seta">Saber mais sobre a Luna →</a>
-                </div>
-              </article>
-
-              <article class="cartao">
-                <img src="images/cat6.jpg" alt="Simba" class="imagem-animal" width="400" height="250">
-                <div class="corpo-cartao">
-                  <span class="etiqueta">Gato · Macho · Jovem</span>
-                  <h3>Simba</h3>
-                  <p>Curioso e brincalhão. Adora caçar brinquedos de corda e dormir ao sol na janela.</p>
-                  <a href="#contacto" class="link-seta">Saber mais sobre o Simba →</a>
-                </div>
-              </article>
-            </div>
+        <!-- Simba: Escondido no telemóvel, aparece no PC -->
+        <article class="card d-none d-md-block">
+          <img src="images/cat6.jpg" alt="Simba" class="imagem-animal" width="400" height="250">
+          <div class="corpo-card">
+            <span class="etiqueta">Gato · Macho · Jovem</span>
+            <h3>Simba</h3>
+            <p>Curioso e brincalhão. Adora caçar brinquedos de corda e dormir ao sol na janela.</p>
+            <a href="#contacto" class="link-seta">Saber mais sobre o Simba →</a>
           </div>
+        </article>
 
-          <!-- SLIDE 3 (Max e Mia) -->
-          <div class="carousel-item">
-            <div class="grelha-cards">
-              <article class="cartao">
-                <img src="images/cute-dog-up-adoption.jpg" alt="Max" class="imagem-animal" width="400" height="250">
-                <div class="corpo-cartao">
-                  <span class="etiqueta">Cão · Macho · Adulto</span>
-                  <h3>Max</h3>
-                  <p>Cheio de energia, adora longas caminhadas e jogos de apanhar a bola no parque.</p>
-                  <a href="#contacto" class="link-seta">Saber mais sobre o Max →</a>
-                </div>
-              </article>
-
-              <article class="cartao">
-                <img src="images/cat4.jpg" alt="Mia" class="imagem-animal" width="400" height="250">
-                <div class="corpo-cartao">
-                  <span class="etiqueta">Gato · Fêmea · Jovem</span>
-                  <h3>Mia</h3>
-                  <p>Muito dócil e meiga. Adapta-se facilmente a ambientes acolhedores e adora festas.</p>
-                  <a href="#contacto" class="link-seta">Saber mais sobre a Mia →</a>
-                </div>
-              </article>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- botões do carrossel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Seguinte</span>
-        </button>
       </div>
-    </section>
+    </div>
+
+
+    <!-- SLIDE 3 -->
+    <div class="carousel-item">
+      <div class="grelha-cards">
+        
+        <!-- Max: Visível em todos os ecrãs -->
+        <article class="card">
+          <img src="images/cute-dog-up-adoption.jpg" alt="Max" class="imagem-animal" width="400" height="250">
+          <div class="corpo-card">
+            <span class="etiqueta">Cão · Macho · Adulto</span>
+            <h3>Max</h3>
+            <p>Cheio de energia, adora longas caminhadas e jogos de apanhar a bola no parque.</p>
+            <a href="#contacto" class="link-seta">Saber mais sobre o Max →</a>
+          </div>
+        </article>
+
+        <!-- Mia: Escondida no telemóvel, aparece no PC -->
+        <article class="card d-none d-md-block">
+          <img src="images/cat4.jpg" alt="Mia" class="imagem-animal" width="400" height="250">
+          <div class="corpo-card">
+            <span class="etiqueta">Gato · Fêmea · Jovem</span>
+            <h3>Mia</h3>
+            <p>Muito dócil e meiga. Adapta-se facilmente a ambientes acolhedores e adora festas.</p>
+            <a href="#contacto" class="link-seta">Saber mais sobre a Mia →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- botões -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Seguinte</span>
+  </button>
+</div>
 
     <!-- como ajudar -->
     <section id="apoiar" class="fundo-destaque-bloco">
