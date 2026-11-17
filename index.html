@@ -21,11 +21,11 @@
     </div>
   </div>
 
- <!-- cabeçalho principal com menu hambúrguer -->
-  <header class="cabecalho-principal">
-    <div class="container d-flex justify-content-between align-items-center">
-
-      <!-- logotipo e o nome da associação -->
+ <!-- cabeçalho principal com menu hamburguer -->
+  <header class="cabecalho-principal navbar navbar-expand-lg">
+    <div class="container">
+      
+      <!-- logotipo -->
       <a href="#inicio" class="logo-marca">
         <img src="images/logo.jpg" alt="Logotipo Aanifeira" class="logo-imagem">
         <div class="logo-texto">
@@ -34,26 +34,26 @@
         </div>
       </a>
 
-      <!-- botão hambúrguer bootstrap -->
-      <button class="navbar-toggler d-lg-none" type="button btn-success" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- botão hamburguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#conteudoNavbar" aria-controls="conteudoNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- navegação e modo escuro que ficam escondidos em mobile  -->
-      <nav class="collapse navbar-collapse d-lg-flex justify-content-end align-items-center w-auto" id="menuNavegacao">
-        <div class="menu-nav d-flex flex-column flex-lg-row align-items-center gap-3 m-0">
+      <!-- conteúdo do menu  -->
+      <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbar">
+        <nav class="menu-nav d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
           <a href="#sobre">Quem Somos</a>
           <a href="#adocao">Adoções</a>
           <a href="#apoiar">Seja Voluntário</a>
           <a href="#contacto" class="btn-menu">Contactos</a>
 
-          <!-- botão em checkbox para ligar/desligar o modo escuro -->
+          <!-- botão do modo escuro -->
           <label class="botao-tema mb-0">
             <input type="checkbox" id="modo-escuro">
             <span>Modo escuro</span>
           </label>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
     </div>
   </header>
