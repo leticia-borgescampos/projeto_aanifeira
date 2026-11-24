@@ -411,6 +411,15 @@ body {
   object-fit: cover;
 }
 
+.foto-destaque {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-destaque:hover {
+  transform: scale(1.15); /* Cresce 5% suavemente */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 .corpo-card {
   padding: 20px;
   text-align: left;
