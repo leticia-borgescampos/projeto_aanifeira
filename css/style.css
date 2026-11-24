@@ -201,7 +201,7 @@ body {
 
 /* BANNER PRINCIPAL */
 .banner-destaque {
-  background: linear-gradient(rgba(13, 92, 70, 0.85), rgba(8, 61, 47, 0.9)), url('images/rescue-dogs-shelter.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(13, 92, 70, 0.85), rgba(8, 61, 47, 0.9)), url('../images/rescue-dogs-shelter.jpg') center/cover no-repeat;
   color: #ffffff;
   padding: 90px 0;
   text-align: center;
