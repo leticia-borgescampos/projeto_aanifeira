@@ -661,11 +661,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-}
-  .navegacao {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 
   .menu-nav {
     width: auto;
@@ -704,7 +699,7 @@ body {
   .carousel-control-next {
     right: -40px;
   }
-
+}
 
 /* no telemovel:  1 item por vez */
 @media (min-width: 992px) {
