@@ -27,7 +27,7 @@
 
 /* ANIMAÇÃO */
 
-/* animação começa invisível e desloca para baixo */
+/* animação começa invisível e desloca para baixo para não abrir de forma "seca" */
 main > section {
   opacity: 0;
   transform: translateY(15px);
@@ -105,7 +105,7 @@ body {
   text-decoration: none;
   color: var(--texto-principal);
   transition: transform 0.2s ease;
-  /*O logotipo cresce ligeiramente quando o rato passa por cima, dando resultado visual de que é clicável e volta para o topo da página*/
+  /*O logotipo cresce ligeiramente quando o rato passa por cima, dando a indicação visual de que é clicável e volta para o topo da página*/
 }
 
 .logo-marca:hover {
@@ -182,7 +182,7 @@ body {
   font-size: 0.85rem;
   user-select: none;
   transition: all 0.3s ease;
-  /* o botão sobe ligeiramente */
+  
 }
 
 .botao-tema input[type="checkbox"] {
@@ -195,6 +195,8 @@ body {
 .botao-tema:hover {
   background-color: var(--cor-primaria);
   color: #ffffff;
+  transform: translateY(-2px);
+  /* o botão modo escuro sobe ligeiramente */
 }
 
 /* BANNER PRINCIPAL */
@@ -440,7 +442,7 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: transform 0.2s ease;
-  /* a seta (ex: "Saber mais sobre o Bobi →") salta para a direita, gerando uma opção clicável */
+  /* a seta (ex: "Saber mais sobre o Bobi →") salta para a direita, cria uma opção clicável */
 }
 
 .link-seta:hover {
