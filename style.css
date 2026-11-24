@@ -630,6 +630,29 @@ body {
   padding: 8px 20px;
 }
 
+/* ajusta as cores dentro do pop-up para manter boa leitura */
+.modal .modal-content {
+  background-color: var(--superficie);
+  color: var(--texto-principal);
+}
+
+/* para que o título e o texto do pop-up usem a cor do tema */
+.modal .modal-title,
+.modal .modal-body p {
+  color: var(--texto-principal);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*  MEDIA QUERIES PARA COMPUTADOR */
 @media (min-width: 768px) {
   .navegacao {
