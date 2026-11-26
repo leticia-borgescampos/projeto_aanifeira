@@ -424,14 +424,20 @@ body {
    - Transição suave de entrada dos blocos (opacity + transform: translateY para deslocar o elemento)
    - Pequenas interações em :hover nos cards/fotos (ex.: scale(1.12) ou rotateY) */
 
+/* para telemóveis e tablets */
+
 .foto-destaque {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ transition: transform 0.2s ease, box-shadow 0.2s ease;
+ cursor: pointer;
 }
 
-.foto-destaque:hover {
-  transform: scale(1.15); /* Cresce 5% suavemente */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.foto-destaque:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
 }
+
+/* - No Mobile: usei :active para dar efeito imediato ao toque (efeito clique) sem deixar a imagem presa no ecrã mobile
+   - No Desktop (@media min-width: 992px): usei :hover com scale(1.08) para destacar o animal suavemente ao passar o cursor */
 
 .corpo-card {
   padding: 20px;
@@ -722,6 +728,22 @@ body {
     right: -40px;
   }
 }
+
+/* a partir de 992px - animação ao passar o rato (Hover) */
+@media (min-width: 992px) {
+  /* Transição ao passar o rato */
+  .foto-destaque {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  /* zoom e elevação ao passar o rato no computador */
+  .foto-destaque:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+
 
 /* no telemovel:  1 item por vez */
 @media (min-width: 992px) {
