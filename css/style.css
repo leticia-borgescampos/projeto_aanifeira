@@ -1,3 +1,7 @@
+
+/*VARIÁVEIS CSS & PALETA DE CORES
+   - Uso do :root para centralizar a paleta de cores */
+
 /*  VARIÁVEIS DE CORES (modo claro) */
 :root {
   --fundo-pagina: #f4f6f5;       /* Fundo geral claro */
@@ -11,6 +15,11 @@
   --sombra-caixa: 0 10px 30px rgba(0, 0, 0, 0.04);
   --raio-suave: 8px;
 }
+
+
+/*MODO ESCURO COM :has()
+   - Mudança de tema em CSS conforme aprendemos em aula
+   - Uso da pseudo-classe :has(#modo-escuro:checked) para atribuir as variáveis e adaptar o tema do site*/
 
 /* MODO ESCURO COM :has() */
 :root:has(#modo-escuro:checked) {
@@ -410,6 +419,10 @@ body {
   height: 250px;
   object-fit: cover;
 }
+
+/* ANIMAÇÕES & TRANSICÕES
+   - Transição suave de entrada dos blocos (opacity + transform: translateY para deslocar o elemento)
+   - Pequenas interações em :hover nos cards/fotos (ex.: scale(1.12) ou rotateY) */
 
 .foto-destaque {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
